@@ -13,15 +13,8 @@ body{
     max-width: 50%;
     /*align-self: center;*/
 }
-#venue{
-    display: none;
-}
-#bat_multiselect{
-    display: none;
-}
-#bowl_multiselect{
-    display:none;
-}
+#venue{display: none;}
+#bowlers{display:none;}
 img {
     /*float: left;*/
     width:  150px;
@@ -62,3 +55,26 @@ img {
 form{
     /*display: none;*/
 }
+
+/*Grid layout*/
+#batTeam{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  column-gap: 55px;
+  grid-row-gap: 5px;
+}
+
+#batTeam div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  transition: all 0.1s;
+}
+#batTeam div:hover{
+  border: 2px solid grey;
+  background: #fafafa;
+}
+#batTeam p{text-align: center;}

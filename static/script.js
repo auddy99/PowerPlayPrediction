@@ -1,7 +1,7 @@
 $(document).ready(function(){console.log("Re");});
 
 $( document ).ready(function() {
-	$("#batTeam button").click(function(){
+	$("#batTeam div").click(function(){
 		// console.log($(this).attr("value"))
 		$("#batTeamForm")[0].value = $(this).attr("value")
 		$("#batTeam").fadeOut(300,function(){
@@ -32,17 +32,17 @@ $( document ).ready(function() {
 			$("#bat_multiselect").fadeIn();			
 		});
 	})
-	$("#bat_multiselect select").multiselect(
-	// 	function(){
-	// 	// console.log($(this).attr("value"))
-	// 	$("#batsmenForm").value = $(this).attr("value")
-	// 	$("#bat_multiselect").fadeOut(300,function(){
-	// 		$("#bowl_multiselect").fadeIn();			
-	// 	}
-	// 	);
-	// }
-	)
 
+	$("#batsman button").click(function(){
+		$("#bat_multiselect")[0][$(this)[0].value].selected = true;
+		$(this).css("border","2px solid red");
+	})
+	$("#bat_complete").click(function(){
+		$("#batsman").fadeOut(300,function(){
+			$("#bowlers").fadeIn();			
+			$("#bowl_multiselect").fadeIn();			
+		});
+	})
 	
 
 });

@@ -16,129 +16,196 @@
         
     </style>
   <body >
-<!--     <div class="login"> -->
-    <!-- <nav class="navbar navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="static/images/pp.png" alt="" width="30" height="24">
-        </a>
-      </div>
-    </nav> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href ="home"><img id='navbar-image' src="static/images/pp.png"></a>
-        <button onclick="location.href='home'">Reset</button>
-      </div>
-    </nav>
+
+
+    <form action="/predict" method="post">
+        <input type="text" name="batTeamForm" id="batTeamForm">
+        <input type="text" name="bowlTeamForm" id="bowlTeamForm">
+        <input type="text" name="inningsForm" id="inningsForm">
+        <input type="text" name="venueForm" id="venueForm">
+        <select name='batsmen_multiselect' id="bat_multiselect" type="button" multiple>
+          <option value="abdevilliers">AB Devilliers</option> 
+          <option value="abdulsamad">Abdulsamad</option>
+          <option value="abhisheksharma">Abhishek Sharma</option>
+          <option value="adhales">AD Hales</option>
+          <option value="adrussel">AD Russel</option>
+          <option value="ajfinch">AJ Finch</option>
+          <option value="amrahane">AM Rahane</option>
+          <option value="asroy">AS Roy</option>
+          <option value="atrayudu">AT Rayudu</option>
+          <option value="bastokes">Bastokes</option>
+          <option value="caingram">CA Ingram</option>
+          <option value="calynn">CA Lynn</option>
+          <option value="capujara">CA Pujara</option>
+          <option value="chgayle">CH Gayle</option>
+          <option value="crbrathwait">CR Brathwait</option>
+          <option value="cmunro">CM Unro</option>
+          <option value="damiller">DA Miller</option>
+          <option value="dawarner">DA Warner</option>
+          <option value="dhyagnik">DH Yagnik</option>
+          <option value="djhood">DJ Hood</option>
+          <option value="dpadikkal">DP Adikkal</option>
+          <option value="ejgmorgan">EJG Morgan</option>
+          <option value="fduplessis">FD Uplessis</option>
+          <option value="ghvihari">GH Vihari</option>
+          <option value="gjmaxwell">GJ Maxwell</option>
+          <option value="gurkeeratsingh">Gurkeerat Singh</option>
+          <option value="ishankishan">Ishan Kishan</option>
+          <option value="jcbuttler">JC Buttler</option>
+          <option value="jjroy">JJ Roy</option>
+          <option value="jsuchith">JS Uchith</option>
+          <option value="kapollard">KA POllard</option>
+          <option value="kdkarthik">KD Karthik</option>
+          <option value="kknair">KK Nair</option>
+          <option value="klrahul">KL Rahul</option>
+          <option value="kmjadhav">KM Jadhav</option>
+          <option value="kswilliamson">KS Williamson</option>
+          <option value="lslivingstone">LS Livingstone</option>
+          <option value="maagarwal">MA Aggarwal</option>
+          <option value="mandeepsingh">Mandeepsingh</option>
+          <option value="mkpandey">MK Pandey</option>
+          <option value="mmali">MM Ali</option>
+          <option value="mpstoinis">MP Stonis</option>
+          <option value="msdhoni">MS Dhoni</option>
+          <option value="npooran">N Pooran</option>
+          <option value="nrana">N Rana</option>
+          <option value="nsnaik">NS Naik</option>
+          <option value="pkgarg">PK Garg</option>
+          <option value="qdekock">QD Ekok</option>
+          <option value="ratripath">RA Tripathi</option>
+          <option value="rdgaikwad">RD Gaikwad</option>
+          <option value="rgsharma">RG Sharma</option>
+          <option value="rmpatidar">RM Patidar</option>
+          <option value="rparag">R Parag</option>
+          <option value="rrpant">RR Pant</option>
+          <option value="rsharma">R Sharma</option>
+          <option value="rvuthappa">RV Uthappa</option>
+          <option value="sachinbaby">Sachin Baby</option>
+          <option value="sdhawan">S Dhawan</option>
+          <option value="sayadav">SA Yadav</option>
+          <option value="semarsh">SE Marsh</option>
+          <option value="serutherford">SE Rutherford</option>
+          <option value="shubmangill">Shubman Gill</option>
+          <option value="skraina">SK Raina</option>
+          <option value="snkhan">SN Khan</option>
+          <option value="sohetmyer">SO Hetmyer</option>
+          <option value="spdsmith">SPD Smith</option>  
+          <option value="ssiyer">SS Iyer</option>
+          <option value="tbanton">T Banton</option>
+          <option value="tmhead">TM Head</option>
+          <option value="vkohli">V Kohli</option>
+          <option value="wpsaha">WP Saha</option>
+          <option value="ybkjaiswal">YBK Jaiswal</option>
+        </select>
+        <select name='bowlers_multiselect' id="bowl_multiselect" type="button" multiple>
+          <option value="asingh">A Singh</option>
+          <option value="ajturner">AJ Turner</option>
+          <option value="ajtye">AJ Tye</option>
+          <option value="amishra">A Mishra</option>
+          <option value="ankitsharma">Ankit Sharma</option>
+          <option value="anortje">AN Ortje</option>
+          <option value="arpatel">AR Patel</option>
+          <option value="arshdeepsingh">Arshdeep Singh</option>
+          <option value="asrajpoot">AS Rajput</option>
+          <option value="aveshkhan">Aves Khan</option>
+          <option value="azampa">AZ Ampa</option>
+          <option value="basilthampi">Basil Thampi</option>
+          <option value="bcjcutting">BCJ Cutting</option>
+          <option value="bkumar">B Kumar</option>
+          <option value="cdegrandhomme">CDE GrandHomme</option>
+          <option value="chmorris">CH Morris</option>
+          <option value="cjjordan">CJ Jordan</option>
+          <option value="crwoakes">CR Woakes</option>
+          <option value="cvvarun">CV Varun</option>
+          <option value="djbravo">DJ Bravo</option>
+          <option value="dlchahar">DL Chahar</option>
+          <option value="dmbravo">DM Bravo</option>
+          <option value="drsams">DR Sams</option>
+          <option value="dskulkarni">DS Kulkarni</option>
+          <option value="dtchristian">DT Christian</option>
+          <option value="dwsteyn">DW Steyn</option>
+          <option value="ferguson">Ferguson</option>
+          <option value="harpreetbrar">Harpreetbrar</option>
+          <option value="hhpandya">HH Pandya</option>
+          <option value="imarantahir">Imarantahir</option>
+          <option value="isharma">I Sharma</option>
+          <option value="issodhi">IS Sodhi</option>
+          <option value="jcarcher">JC Archer</option>
+          <option value="jdsneesham">JD Sneesham</option>
+          <option value="jdunadkat">JD Unadkat</option>
+          <option value="joholder">JO Holder</option>
+          <option value="jrhazelwood">JR Hazelwood</option>
+          <option value="jyadav">J Yadav</option>
+          <option value="kajamieson">KA Jamieson</option>
+          <option value="kartiktyagi">Kartik Tyagi</option>
+          <option value="kgowtham">K Gowtham</option>
+          <option value="khpandya">KH Pandya</option>
+          <option value="krabada">K Rabada</option>
+          <option value="kvsharma">KV Sharma</option>
+          <option value="kwrichardson">KW Richardson</option>
+          <option value="kuldeepyadav">Kuldeep Yadav</option>
+          <option value="lhferguson">LH Ferguson</option>
+          <option value="lngidi">Ingidi</option>
+          <option value="mashwin">Mashwin</option>
+          <option value="mchenriques">MC Henriques</option>
+          <option value="mdmishra">MD Mishra</option>
+          <option value="mjansen">M Jansen</option>
+          <option value="mjmcclenaghan">MJMC Clenaghan</option>
+          <option value="mjsantner">MJ Santner</option>
+          <option value="mmarkande">M Markande</option>
+          <option value="mohammednabi">Mohammed Nabi</option>
+          <option value="mohammedsiraj">Mohammed Siraj</option>
+          <option value="mprasidhkrishna">MPrasidh Krishna</option>
+          <option value="mrmarsh">MR Marsh</option>
+          <option value="mujeeburrahman">MU Jeebur Rehman</option>
+          <option value="nagarkoti">Nagar Koti</option>
+          <option value="nasaini">NA Saini</option>
+          <option value="pjcummins">PJ Cummins</option>
+          <option value="pnegi">P Negi</option>
+          <option value="ppchawla">PP Chawla</option>
+          <option value="rajadeja">RA Jadeja</option>
+          <option value="rashwin">R ashwin</option>
+          <option value="rdchahar">RD Chahar</option>
+          <option value="rtewatia">R Tewatia</option>
+          <option value="sandeepsharma">Sandeep Sharma</option>
+          <option value="shahbazahmed">Shahbaz Ahmed</option>
+          <option value="shakibalhasan">Shaki Bal Hasan</option>
+          <option value="shivammavi'">Shivam Mavi'</option>
+          <option value="skaul">S Kaul</option>
+          <option value="slamichhane">S Lamichhane</option>
+          <option value="smcurran">SM Curran</option>
+          <option value="snadeem">S Nadeem</option>
+          <option value="snthakur">SN Thakur</option>
+          <option value="spnarine">SP Narine</option>
+          <option value="yschahal">YS Chahal</option>
+          <option value="styagi">S Tyagi</option>
+          <option value="taboult">TA Boult</option>
+          <option value="tgsouthee">TG Southee</option>
+          <option value="tkcurran'">TK Curran'</option>
+          <option value="tnatarajan">T Natarajan</option>
+          <option value="tshamsi">T Shamsi</option>
+          <option value="utyadv">UT Yadv</option>
+          <option value="vshankar">V Shankar</option>
+          <option value="washigtonsundar">Washigton Sundar</option>
+        </select>
+        <input type="submit">
+    </form>
     <!-- <button onclick="location.href='home'">Reset</button> -->
-    <div class='container' align='center'>
+    <div class='container'>
               <h1>IPL Predictions:</h1>
         <label id='bat' for="pclass"><strong>BATTING TEAM:</strong></label>
-        <div  id='batTeam'>
-            <div class='row'>
-                <div class='column'>
-                    <button value="51.949438">
-                        <div class="card" style="width: 9rem;">
-                          <img src="static/images/csk.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <p class="card-text">Chennai Super Kings</p>
-                              </div>
-                          </div>
-                    </button>
-                </div>
-                <div class='column'>
-                    <button value="54.032258">
-                        <div class="card" style="width: 9rem;">
-                          <img src="static/images/srh.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <p class="card-text">Sunrisers Hyderabad</p>
-                              </div>
-                          </div>
-                    </button>
-                </div>
-                <div class='column'>
-                    <button value="52.901042">
-                        <div class="card" style="width: 9rem;">
-                          <img src="static/images/kkr.png" class="card-img-top" alt="...">
-                              <div id='kkr' class="card-body">
-                                <p class="card-text">Kolkata Knight Riders</p>
-                              </div>
-                          </div>
-                    </button>
-                </div>
-                
-                <div class='column'>
-                     <button value="50.902564">
-                        <div class="card" style="width: 9rem;">
-                          <img src="static/images/rcb.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <p class="card-text">Royal Challengers Bangalore</p>
-                              </div>
-                          </div>
-                    </button>
-                </div>
-            </div>
-            <div class='row'>
-                 <div class='column'>
-                    <button value="53.857143">
-                        <div class="card" style="width: 9rem;">
-                          <img src="static/images/kxip.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <p class="card-text">Punjab Kings</p>
-                              </div>
-                          </div>
-                    </button>
-                </div>
-                <div class='column'>
-                   <button value="52.706250">
-                        <div class="card" style="width: 9rem;">
-                          <img src="static/images/dc.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <p class="card-text">Delhi Capitals</p>
-                              </div>
-                          </div>
-                    </button>
-                </div>
-               <div class='column'>
-                   <button value="51.610837">
-                        <div class="card" style="width: 9rem;">
-                          <img src="static/images/mi.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <p class="card-text">Mumbai Indians</p>
-                              </div>
-                          </div>
-                    </button>
-                </div>
-                <div class='column'>
-                   <button value="51.490566">
-                        <div class="card" style="width: 9rem;">
-                          <img src="static/images/rr.png" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <p class="card-text">Rajasthan Royals</p>
-                              </div>
-                          </div>
-                    </button>
-                </div>   
-            </div>
-<!--         </div>  -->               
-            <!-- <div class="card bg-dark text-white">
-              <img src="static/images/csk.png" class="card-img" alt="...">
-              <div class="card-img-overlay">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text">Last updated 3 mins ago</p>
-              </div> -->
-        
-            <!-- <button value="51.949438">Chennai Super Kings</button>
-            <button value="54.032258">Sunrisers Hyderabad</button>
-            <button value="52.901042">Kolkata Knight Riders</button>
-            <button value="50.902564">Royal Challengers Bangalore</button>
-            <button value="53.857143">Kings XI Punjab</button>
-            <button value="52.706250">Delhi Capitals</button>  
-            <button value="51.610837">Mumbai Indians</button>
-            <button value="51.490566">Rajasthan Royals</button> -->
+
+        <div id='batTeam'>
+            <div value="51.949438" class="tTeam"><img src="static/images/csk.png"><p>Chennai Super Kings</p></div>
+            <div value="54.032258" class="tTeam"><img src="static/images/srh.png"><p>Sunrisers Hyderabad</p></div>
+            <div value="52.901042" class="tTeam"><img src="static/images/kkr.png"><p>Kolkata Knight Riders</p></div>
+            <div value="50.902564" class="tTeam"><img src="static/images/rcb.png"><p>Royal Challengers Bangalore</p></div>
+            <div value="53.857143" class="tTeam"><img src="static/images/kxip.png"><p>Punjab Kings</p></div>
+            <div value="52.706250" class="tTeam"><img src="static/images/dc.png"><p>Delhi Capitals</p></div>
+            <div value="51.610837" class="tTeam"><img src="static/images/mi.png"><p>Mumbai Indians</p></div>
+            <div value="51.490566" class="tTeam"><img src="static/images/rr.png"><p>Rajasthan Royals</p></div>
         </div>
-        <input id="batTeamForm" type="text" name="bat_team">
+
         <br>
 
         <label for="pclass"><strong>BOWLING TEAM:</strong></label>
@@ -239,7 +306,7 @@
             <button value="50.487685">=Mumbai Indians</button>
             <button value="51.185484">Sunrisers Hyderabad</button> 
         </div>
- -->        <input id="bowlTeamForm" type="text" name="bowl_team">
+ -->        
          <br>
         <label for="pclass"><strong>INNINGS:</strong></label>
         <div id='innings'>
@@ -268,7 +335,6 @@
             <!-- <button value="1.0">1</button>
             <button value="2.0">2</button> -->
         </div>
-        <input id="inningsForm" type="text" name="innings">
         <br>
         <label for="pclass"><strong>VENUE:</strong></label>
         <div id="venue">
@@ -332,180 +398,130 @@
             <button value="52.901961">Eden Gardens</button>
             <button value="54.826087">Sardar Patel Stadium</button> -->
         </div>
-        <input id="venueForm" type="text" name="venue">
         <br>
+        <div id="batsman">
+            <div class='row' id='venue-row1'>
+                <div class='column'>
+                    <button value="0">
+                        <div class="card" style="width: 9rem;">
+                          <img src="static/images/chidambaram.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-text">AB Devilliers</p>
+                              </div>
+                          </div>
+                    </button>
+                </div>
+                <div class='column'>
+                    <button value="1">
+                        <div class="card" style="width: 9rem;">
+                          <img src="static/images/wankhede.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-text">abdulsamad</p>
+                              </div>
+                          </div>
+                    </button>
+                </div>
+                <div class='column'>
+                    <button value="54.101695">
+                        <div class="card" style="width: 9rem;">
+                          <img src="static/images/feroz.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-text">Feroz Shah Kotla</p>
+                              </div>
+                          </div>
+                    </button>
+                </div>
+                <div class='row' id='venue-row2'>
+                    <div class='column'>
+                        <button value="52.901961">
+                            <div class="card" style="width: 9rem;">
+                              <img src="static/images/eden.png" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                    <p class="card-text">Eden Gardens</p>
+                                  </div>
+                              </div>
+                        </button>
+                    </div>
+                    <div class='column'>
+                        <button value="54.826087">
+                            <div class="card" style="width: 9rem;">
+                              <img src="static/images/patel.png" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                    <p class="card-text">Sardar Patel Stadium</p>
+                                  </div>
+                              </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <button id="bat_complete">Completed</button>
         <label for="pclass"><strong>BATSMEN:</strong></label>
         <div >
-          <select name='batsmen_multiselect' id="bat_multiselect" type="button" class="btn btn-light" multiple>
-            <option value="abdevilliers">AB Devilliers</option> 
-            <option value="abdulsamad">Abdulsamad</option>
-            <option value="abhisheksharma">Abhishek Sharma</option>
-            <option value="adhales">AD Hales</option>
-            <option value="adrussel">AD Russel</option>
-            <option value="ajfinch">AJ Finch</option>
-            <option value="amrahane">AM Rahane</option>
-            <option value="asroy">AS Roy</option>
-            <option value="atrayudu">AT Rayudu</option>
-            <option value="bastokes">Bastokes</option>
-            <option value="caingram">CA Ingram</option>
-            <option value="calynn">CA Lynn</option>
-            <option value="capujara">CA Pujara</option>
-            <option value="chgayle">CH Gayle</option>
-            <option value="crbrathwait">CR Brathwait</option>
-            <option value="cmunro">CM Unro</option>
-            <option value="damiller">DA Miller</option>
-            <option value="dawarner">DA Warner</option>
-            <option value="dhyagnik">DH Yagnik</option>
-            <option value="djhood">DJ Hood</option>
-            <option value="dpadikkal">DP Adikkal</option>
-            <option value="ejgmorgan">EJG Morgan</option>
-            <option value="fduplessis">FD Uplessis</option>
-            <option value="ghvihari">GH Vihari</option>
-            <option value="gjmaxwell">GJ Maxwell</option>
-            <option value="gurkeeratsingh">Gurkeerat Singh</option>
-            <option value="ishankishan">Ishan Kishan</option>
-            <option value="jcbuttler">JC Buttler</option>
-            <option value="jjroy">JJ Roy</option>
-            <option value="jsuchith">JS Uchith</option>
-            <option value="kapollard">KA POllard</option>
-            <option value="kdkarthik">KD Karthik</option>
-            <option value="kknair">KK Nair</option>
-            <option value="klrahul">KL Rahul</option>
-            <option value="kmjadhav">KM Jadhav</option>
-            <option value="kswilliamson">KS Williamson</option>
-            <option value="lslivingstone">LS Livingstone</option>
-            <option value="maagarwal">MA Aggarwal</option>
-            <option value="mandeepsingh">Mandeepsingh</option>
-            <option value="mkpandey">MK Pandey</option>
-            <option value="mmali">MM Ali</option>
-            <option value="mpstoinis">MP Stonis</option>
-            <option value="msdhoni">MS Dhoni</option>
-            <option value="npooran">N Pooran</option>
-            <option value="nrana">N Rana</option>
-            <option value="nsnaik">NS Naik</option>
-            <option value="pkgarg">PK Garg</option>
-            <option value="qdekock">QD Ekok</option>
-            <option value="ratripath">RA Tripathi</option>
-            <option value="rdgaikwad">RD Gaikwad</option>
-            <option value="rgsharma">RG Sharma</option>
-            <option value="rmpatidar">RM Patidar</option>
-            <option value="rparag">R Parag</option>
-            <option value="rrpant">RR Pant</option>
-            <option value="rsharma">R Sharma</option>
-            <option value="rvuthappa">RV Uthappa</option>
-            <option value="sachinbaby">Sachin Baby</option>
-            <option value="sdhawan">S Dhawan</option>
-            <option value="sayadav">SA Yadav</option>
-            <option value="semarsh">SE Marsh</option>
-            <option value="serutherford">SE Rutherford</option>
-            <option value="shubmangill">Shubman Gill</option>
-            <option value="skraina">SK Raina</option>
-            <option value="snkhan">SN Khan</option>
-            <option value="sohetmyer">SO Hetmyer</option>
-            <option value="spdsmith">SPD Smith</option>  
-            <option value="ssiyer">SS Iyer</option>
-            <option value="tbanton">T Banton</option>
-            <option value="tmhead">TM Head</option>
-            <option value="vkohli">V Kohli</option>
-            <option value="wpsaha">WP Saha</option>
-            <option value="ybkjaiswal">YBK Jaiswal</option>
-          </select>
-          <input id="batsmenForm" type="text" name="batsmen">
+
         </div>
         <br>
+
+
+        <div id="bowlers">
+            <div class='row' id='venue-row1'>
+                <div class='column'>
+                    <button value="0">
+                        <div class="card" style="width: 9rem;">
+                          <img src="static/images/chidambaram.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-text">AB Devilliers</p>
+                              </div>
+                          </div>
+                    </button>
+                </div>
+                <div class='column'>
+                    <button value="1">
+                        <div class="card" style="width: 9rem;">
+                          <img src="static/images/wankhede.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-text">abdulsamad</p>
+                              </div>
+                          </div>
+                    </button>
+                </div>
+                <div class='column'>
+                    <button value="54.101695">
+                        <div class="card" style="width: 9rem;">
+                          <img src="static/images/feroz.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-text">Feroz Shah Kotla</p>
+                              </div>
+                          </div>
+                    </button>
+                </div>
+                <div class='row' id='venue-row2'>
+                    <div class='column'>
+                        <button value="52.901961">
+                            <div class="card" style="width: 9rem;">
+                              <img src="static/images/eden.png" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                    <p class="card-text">Eden Gardens</p>
+                                  </div>
+                              </div>
+                        </button>
+                    </div>
+                    <div class='column'>
+                        <button value="54.826087">
+                            <div class="card" style="width: 9rem;">
+                              <img src="static/images/patel.png" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                    <p class="card-text">Sardar Patel Stadium</p>
+                                  </div>
+                              </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <label for="pclass"><strong>BOWLERS:</strong></label>
         <div id="bowl_multiselect">
-          <select name='multiple' type="button" class="btn btn-light" name="cars" multiple>
-            <option value="asingh">A Singh</option>
-            <option value="ajturner">AJ Turner</option>
-            <option value="ajtye">AJ Tye</option>
-            <option value="amishra">A Mishra</option>
-            <option value="ankitsharma">Ankit Sharma</option>
-            <option value="anortje">AN Ortje</option>
-            <option value="arpatel">AR Patel</option>
-            <option value="arshdeepsingh">Arshdeep Singh</option>
-            <option value="asrajpoot">AS Rajput</option>
-            <option value="aveshkhan">Aves Khan</option>
-            <option value="azampa">AZ Ampa</option>
-            <option value="basilthampi">Basil Thampi</option>
-            <option value="bcjcutting">BCJ Cutting</option>
-            <option value="bkumar">B Kumar</option>
-            <option value="cdegrandhomme">CDE GrandHomme</option>
-            <option value="chmorris">CH Morris</option>
-            <option value="cjjordan">CJ Jordan</option>
-            <option value="crwoakes">CR Woakes</option>
-            <option value="cvvarun">CV Varun</option>
-            <option value="djbravo">DJ Bravo</option>
-            <option value="dlchahar">DL Chahar</option>
-            <option value="dmbravo">DM Bravo</option>
-            <option value="drsams">DR Sams</option>
-            <option value="dskulkarni">DS Kulkarni</option>
-            <option value="dtchristian">DT Christian</option>
-            <option value="dwsteyn">DW Steyn</option>
-            <option value="ferguson">Ferguson</option>
-            <option value="harpreetbrar">Harpreetbrar</option>
-            <option value="hhpandya">HH Pandya</option>
-            <option value="imarantahir">Imarantahir</option>
-            <option value="isharma">I Sharma</option>
-            <option value="issodhi">IS Sodhi</option>
-            <option value="jcarcher">JC Archer</option>
-            <option value="jdsneesham">JD Sneesham</option>
-            <option value="jdunadkat">JD Unadkat</option>
-            <option value="joholder">JO Holder</option>
-            <option value="jrhazelwood">JR Hazelwood</option>
-            <option value="jyadav">J Yadav</option>
-            <option value="kajamieson">KA Jamieson</option>
-            <option value="kartiktyagi">Kartik Tyagi</option>
-            <option value="kgowtham">K Gowtham</option>
-            <option value="khpandya">KH Pandya</option>
-            <option value="krabada">K Rabada</option>
-            <option value="kvsharma">KV Sharma</option>
-            <option value="kwrichardson">KW Richardson</option>
-            <option value="kuldeepyadav">Kuldeep Yadav</option>
-            <option value="lhferguson">LH Ferguson</option>
-            <option value="lngidi">Ingidi</option>
-            <option value="mashwin">Mashwin</option>
-            <option value="mchenriques">MC Henriques</option>
-            <option value="mdmishra">MD Mishra</option>
-            <option value="mjansen">M Jansen</option>
-            <option value="mjmcclenaghan">MJMC Clenaghan</option>
-            <option value="mjsantner">MJ Santner</option>
-            <option value="mmarkande">M Markande</option>
-            <option value="mohammednabi">Mohammed Nabi</option>
-            <option value="mohammedsiraj">Mohammed Siraj</option>
-            <option value="mprasidhkrishna">MPrasidh Krishna</option>
-            <option value="mrmarsh">MR Marsh</option>
-            <option value="mujeeburrahman">MU Jeebur Rehman</option>
-            <option value="nagarkoti">Nagar Koti</option>
-            <option value="nasaini">NA Saini</option>
-            <option value="pjcummins">PJ Cummins</option>
-            <option value="pnegi">P Negi</option>
-            <option value="ppchawla">PP Chawla</option>
-            <option value="rajadeja">RA Jadeja</option>
-            <option value="rashwin">R ashwin</option>
-            <option value="rdchahar">RD Chahar</option>
-            <option value="rtewatia">R Tewatia</option>
-            <option value="sandeepsharma">Sandeep Sharma</option>
-            <option value="shahbazahmed">Shahbaz Ahmed</option>
-            <option value="shakibalhasan">Shaki Bal Hasan</option>
-            <option value="shivammavi'">Shivam Mavi'</option>
-            <option value="skaul">S Kaul</option>
-            <option value="slamichhane">S Lamichhane</option>
-            <option value="smcurran">SM Curran</option>
-            <option value="snadeem">S Nadeem</option>
-            <option value="snthakur">SN Thakur</option>
-            <option value="spnarine">SP Narine</option>
-            <option value="yschahal">YS Chahal</option>
-            <option value="styagi">S Tyagi</option>
-            <option value="taboult">TA Boult</option>
-            <option value="tgsouthee">TG Southee</option>
-            <option value="tkcurran'">TK Curran'</option>
-            <option value="tnatarajan">T Natarajan</option>
-            <option value="tshamsi">T Shamsi</option>
-            <option value="utyadv">UT Yadv</option>
-            <option value="vshankar">V Shankar</option>
-            <option value="washigtonsundar">Washigton Sundar</option>
-          </select>
+
         </div>
         <br>
         <div>

@@ -14,9 +14,9 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict():
 	float_features = [x for x in request.form.values()]
-	float_features = float_features+request.form.getlist('bat_multiselect')
-	float_features = float_features+request.form.getlist('multiple')
-	print(float_features)
+	float_features = float_features+request.form.getlist('batsmen_multiselect')
+	float_features = float_features+request.form.getlist('bowlers_multiselect')
+	print("######################",len(float_features))
 
 	ls =[]
 	for i in float_features:
