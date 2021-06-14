@@ -1,13 +1,10 @@
 body{
-         background-image: url('../static/images/ipl.jpeg');
+         /*background-image: url('../static/images/ipl.jpeg');*/
          height: 75%;
          background-position: left;
          background-repeat: no-repeat;
          background-size: 500px 300px;
     }
-#bowlTeam{
-          display: none;
-      }
 #innings{
     display: none;
     max-width: 50%;
@@ -57,14 +54,16 @@ form{
 }
 
 /*Grid layout*/
-#batTeam{
-  display: grid;
+#batTeam, #bowlTeam, #innings{
+  display: none;
   grid-template-columns: 20% 20% 20% 20%;
   column-gap: 55px;
   grid-row-gap: 5px;
 }
 
-#batTeam div{
+#innings{grid-template-columns: 50% 50%;}
+
+#batTeam div, #bowlTeam div, #innings div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,8 +72,20 @@ form{
   padding: 10px;
   transition: all 0.1s;
 }
+
 #batTeam div:hover{
   border: 2px solid grey;
   background: #fafafa;
 }
-#batTeam p{text-align: center;}
+#batTeam p, #bowlTeam p, #innings p{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+

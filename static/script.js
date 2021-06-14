@@ -1,23 +1,23 @@
-$(document).ready(function(){console.log("Re");});
+$(document).ready(function(){
+	$("#batTeam").css("display","grid");
 
-$( document ).ready(function() {
 	$("#batTeam div").click(function(){
 		// console.log($(this).attr("value"))
 		$("#batTeamForm")[0].value = $(this).attr("value")
-		$("#batTeam").fadeOut(300,function(){
-			$("#bowlTeam").fadeIn();			
+		$("#batTeam").fadeOut(500,function(){
+			$("#bowlTeam").css("display","grid");
 		});
 	})
 
-	$("#bowlTeam button").click(function(){
+	$("#bowlTeam div").click(function(){
 		// console.log($(this).attr("value"))
 		$("#bowlTeamForm")[0].value = $(this).attr("value")
 		$("#bowlTeam").fadeOut(300,function(){
-			$("#innings").fadeIn();			
+			$("#innings").css("display","grid");
 		});
 	})
 
-	$("#innings button").click(function(){
+	$("#innings div").click(function(){
 		// console.log($(this).attr("value"))
 		$("#inningsForm")[0].value = $(this).attr("value")
 		$("#innings").fadeOut(300,function(){
@@ -25,7 +25,7 @@ $( document ).ready(function() {
 		});
 	})
 
-	$("#venue button").click(function(){
+	$("#venue div").click(function(){
 		// console.log($(this).attr("value"))
 		$("#venueForm")[0].value = $(this).attr("value")
 		$("#venue").fadeOut(300,function(){
@@ -44,6 +44,5 @@ $( document ).ready(function() {
 		});
 	})
 	
-
 });
 
